@@ -43,6 +43,9 @@ GEM
     arel (8.0.0)
     bcrypt (3.1.11)
     bindex (0.5.0)
+    bootstrap-kaminari-views (0.0.5)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
     builder (3.2.3)
     byebug (9.1.0)
     capybara (2.15.4)
@@ -68,6 +71,8 @@ GEM
     faker (1.8.4)
       i18n (~> 0.5)
     ffi (1.9.18)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     friendly_id (5.1.0)
       activerecord (>= 4.0.0)
     globalid (0.4.1)
@@ -77,6 +82,18 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -185,12 +202,15 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  bootstrap-kaminari-views
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   faker
+  font-awesome-rails
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.5)
+  kaminari
   listen (>= 3.0.5, < 3.2)
   pg
   puma (~> 3.7)

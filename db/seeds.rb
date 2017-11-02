@@ -6,14 +6,22 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(
-	fullname: 'Pawel Rudnicki',
-	email: 'pawelrudnicki79@gmail.com',
-	role: 'admin',
-	password: 'admin'
-)
+	user = User.create(
+		fullname: 'Pawel Rudnicki',
+		email: 'pawelrudnicki79@gmail.com',
+		role: 'admin',
+		password: 'admin'
+	)
 
 10.times do
+	
+	user = User.create(
+		fullname: Faker::Name.name,
+		email: Faker::Internet.email,
+		role: ['author', 'guest'].sample,
+		password: 'admin'
+	)	
+
 	page = Page.create(
 		title: Faker::Lorem.sentence,
 		content: Faker::Lorem.paragraph(2),
