@@ -22,4 +22,12 @@ module ApplicationHelper
 			"<span class='label label-success'>Aktywny</span>".html_safe
 		end
 	end
+
+	def show_fullname fullname
+		if fullname.present?
+			fullname
+		else
+			'Brak danych'
+		end
+	end
 end

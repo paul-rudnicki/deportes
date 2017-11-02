@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 	namespace :panel do
+    resources :pages
 		resources :users, only: [:index]
     resources :sessions, only: [:new, :create, :destroy]
 	end

@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="box">
+      <div class="box-header search-header">
+        <h3 class="box-title">Strony</h3>
+
+        <div class="box-tools">
+          <div class="input-group input-group-sm" style="width: 150px;">
+              <%= form_tag panel_pages_path, method: :get %>
+              <%= text_field_tag :search, nil, :class => 'form-control', :placeholder => 'Szukaj' %>
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.box-header -->
+      <div class="box-body table-responsive no-padding">
+        <table class="table table-hover">
+          <tr>
+            <th>Tytuł</th>
+            <th>Autor</th>
+            <th>Slug</th>
+            <th>Widoczna</th>
+            <th>Utworzono</th>
+            <th class="text-center">Akcje</th>
+          </tr>
+          <% @pages.each do |page| %>
+	          <tr>
+	            <td><%= page.title %></td>
+	            <td><%= page.user.fullname %></td>
+	            <td><%= page.slug %></td>
+	            <td><%= show_status page.publish %></td>
+	            <td><%= since_when page.created_at %></td>
+              <td class="text-center">
+                <%= link_to "pokaż", panel_page_path(page), class: 'btn btn-primary btn-xs' %>
+                <%= link_to "edytuj", edit_panel_page_path(page), class: 'btn btn-info btn-xs' %>
+                <%= link_to "usuń", panel_page_path(page), method: :delete, class: 'btn btn-danger btn-xs' %>
+              </td>
+	          </tr>
+          <% end %>
+        </table>
+      </div>
+      <!-- /.box-body -->
+      <div class="box-footer clearfix">
+
+        <%= paginate @pages, :theme => 'twitter-bootstrap', :pagination_class => 'pagination pagination-sm no-margin pull-right' %>
+      </div>
+    </div>
+    <!-- /.box -->
+  </div>
+</div>
