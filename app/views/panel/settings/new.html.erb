@@ -1,0 +1,15 @@
+<%= form_for [:panel, @setting] do |f| %>
+	<div class="form-group">
+		<%= f.label :site_name, "Tytuł strony" %>
+		<%= f.text_field :site_name, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :posts_per_page, "Ile na stronę" %>
+		<%= f.text_field :posts_per_page, class: 'form-control' %>
+	</div>
+	<div class="form-group">
+		<%= f.label :under_maintenace, "Strona w budowie" %>
+		<%= f.check_box :under_maintenace %>
+	</div>
+	<%= f.submit "Zapisz" %>
+<% end %>
