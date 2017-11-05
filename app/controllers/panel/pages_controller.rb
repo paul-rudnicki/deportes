@@ -45,6 +45,6 @@ class Panel::PagesController < Panel::ApplicationController
   private
 
   def page_params
-    params.require(:page).permit(:id, :title, :content, :publish, :user_id)
+    params.require(:page).permit(:id, :title, :content, :publish, :user_id, :avatar)
   end
 end

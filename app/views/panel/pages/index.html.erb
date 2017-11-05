@@ -24,6 +24,7 @@
             <th>Autor</th>
             <th>Slug</th>
             <th>Widoczna</th>
+            <th>Miniaturka</th>
             <th>Utworzono</th>
             <th class="text-center">Akcje</th>
           </tr>
@@ -33,6 +34,7 @@
 	            <td><%= page.user.fullname %></td>
 	            <td><%= page.slug %></td>
 	            <td><%= show_status page.publish %></td>
+              <td><%= image_tag page.avatar.url(:thumb) %></td>
 	            <td><%= since_when page.created_at %></td>
               <td class="text-center">
                 <%= link_to "pokaż", panel_page_path(page), class: 'btn btn-primary btn-xs' %>
