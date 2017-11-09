@@ -34,6 +34,6 @@ class Panel::SettingsController < Panel::ApplicationController
   private
 
   def settings_params
-  	params.require(:setting).permit(:id, :site_name, :posts_per_page, :under_maintenace)
+  	params.require(:setting).permit(:id, :site_name, :posts_per_page, :under_maintenace, :image )
   end
 end

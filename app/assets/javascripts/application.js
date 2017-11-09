@@ -12,4 +12,16 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require js/modernizr-2.6.2.min
+//= require js/jquery-1.10.2.min
+//= require js/jquery.easing.1.3
+//= require js/bootstrap
+//= require js/owl.carousel.min
+//= require js/jquery.magnific-popup.min
+//= require js/hoverIntent
+//= require js/superfish
+//= require js/easyResponsiveTabs
+//= require js/fastclick
+//= require js/jquery.waypoints.min
+//= require js/main
+

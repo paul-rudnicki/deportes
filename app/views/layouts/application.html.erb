@@ -4,11 +4,37 @@
     <title>Deportes</title>
     <%= csrf_meta_tags %>
 
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+		
+		<%= render 'shared/header' %>
+		
+		<div id="fh5co-hero" style="background-image: url(images/brama.jpg)">
+			<a href="#fh5co-main" class="smoothscroll fh5co-arrow to-animate hero-animate-4"><i class="ti-angle-down"></i></a>
+			<!-- End fh5co-arrow -->
+			<div class="container">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="fh5co-hero-wrap">
+						<div class="fh5co-hero-intro">
+							<h1 class="to-animate hero-animate-1">Slant. Free HTML5 Template</h1>
+							<h2 class="to-animate hero-animate-2">Lovely Made by <a href="http://freehtml5.co" target="_blank">FREEHTML5.co</a></h2>
+							<p class="to-animate hero-animate-3"><a href="#" class="btn btn-outline btn-lg">Get Started</a></p>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+
     <%= yield %>
-  </body>
+		
+		<!-- END fhtco-main -->
+
+
+		<%= render 'shared/footer' %>
+
+	</body>
 </html>

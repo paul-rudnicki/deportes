@@ -11,5 +11,17 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= css/themify-icons
+ *= css/bootstrap
+ *= css/owl.carousel.min
+ *= css/owl.theme.default.min
+ *= css/magnific-popup
+ *= css/superfish
+ *= css/easy-responsive-tabs
+ *= css/animate
+ *= css/style
+ *= css/sample
  *= require_self
  */
+
+
