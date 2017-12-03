@@ -12,16 +12,17 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require js/modernizr-2.6.2.min
-//= require js/jquery-1.10.2.min
-//= require js/jquery.easing.1.3
-//= require js/bootstrap
-//= require js/owl.carousel.min
-//= require js/jquery.magnific-popup.min
-//= require js/hoverIntent
-//= require js/superfish
-//= require js/easyResponsiveTabs
-//= require js/fastclick
+//= require js/jquery-1.11.2.min
+//= require js/jquery.bxslider.min
+//= require js/fancybox/fancybox
+//= require js/fancybox/helpers/jquery.fancybox-thumbs
+//= require js/jquery.flexslider-min
+//= require js/swiper.jquery.min
 //= require js/jquery.waypoints.min
+//= require js/progressbar.min
+//= require js/ion.rangeSlider.min
+//= require js/chosen.jquery.min
+//= require js/jQuery.Brazzers-Carousel
+//= require js/plugins
 //= require js/main
-
+//= require js/gmap

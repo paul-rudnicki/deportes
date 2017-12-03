@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'pages/about_us'
   get 'pages/contact'
+  get '/przeciwpozarowe' => 'pages#przeciwpozarowe'
+  get '/segmentowe' => 'pages#segmentowe'
+  get '/przemyslowe' => 'pages#przemyslowe'
+  get '/uchylne' => 'pages#uchylne'
+  get '/roletowa' => 'pages#roletowa'
+  get '/kontakt' => 'pages#contact', as: :kontakt
+  get '/o-nas' => 'pages#about_us', as: :o_nas
 
 	namespace :panel do
     resources :settings, only: [:new, :create, :edit, :update]

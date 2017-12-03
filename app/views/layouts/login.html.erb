@@ -1,35 +1,26 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>Deportes</title>
+
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'login', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'login', 'data-turbolinks-track': 'reload' %>
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700ii%7CRoboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="hold-transition login-page">
+  <body>
+
+    <%= render 'shared/header' %>
+
+    <%= yield %>
+
+    <%= render 'shared/footer' %>
     
-    <div class="login-box">
-      <%= render 'panel/shared/info' %>
-      <div class="login-logo">
-        <%= link_to '/' do %>
-          <b>Logowanie</b>Deportes
-        <% end %>
-      </div>
-      <!-- /.login-logo -->
-      <div class="login-box-body">
-        <p class="login-box-msg">Konto demo login: demo hasło: demo</p>
-
-        <%= yield %>
-
-      </div>
-      <!-- /.login-box-body -->
-    </div>
-    <!-- /.login-box -->
-
   </body>
-
 </html>

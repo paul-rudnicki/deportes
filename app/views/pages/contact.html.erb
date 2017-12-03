@@ -1,2 +1,68 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<main>
+    <section class="container stylization maincont">
+
+
+        <ul class="b-crumbs">
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+            <li>
+                <span>Kontakt</span>
+            </li>
+        </ul>
+        <h1 class="main-ttl"><span>Kontakt</span></h1>
+        <!-- Contacts - start -->
+        <br>
+        <div class="iconbox-wrap">
+            <div class="row iconbox-list">
+                <div class="cf-xs-6 cf-sm-4 cf-lg-4 col-xs-6 col-sm-4 iconbox-i">
+                    <h3 class="iconbox-i-ttl">601 345 189</h3>
+                    Zadzwoń do nas<br>
+                    <span class="iconbox-i-margin"></span>
+                </div>
+                <div class="cf-xs-6 cf-sm-4 cf-lg-4 col-xs-6 col-sm-4 iconbox-i">
+                    <h3 class="iconbox-i-ttl">Nasz adres</h3>
+                    ul. Korczaka 12,<br>
+                    38-500 Sanok
+                    <span class="iconbox-i-margin"></span>
+                </div>
+                <div class="cf-xs-6 cf-sm-4 cf-lg-4 col-xs-6 col-sm-4 iconbox-i">
+                    <h3 class="iconbox-i-ttl">Godziny</h3>
+                    Pon-Piąt 07:00-18:00<br>
+                    Sat 08:00-13:00
+                    <span class="iconbox-i-margin"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contactform-wrap">
+            <%= form_tag 'contact', class: 'form-validate' %>
+                <h3 class="component-ttl component-ttl-ct component-ttl-hasdesc"><span>Nasz do nas</span></h3>
+                <p class="component-desc component-desc-ct">Odpowiemy w najszybszym możliwy czasie</p>
+                <p class="contactform-field contactform-text">
+                    <label class="contactform-label">Imię</label><!-- NO SPACE --><span class="contactform-input"><input placeholder="Imię" type="text" name="name" data-required="text"></span>
+                </p>
+                <p class="contactform-field contactform-email">
+                    <label class="contactform-label">E-mail</label><!-- NO SPACE --><span class="contactform-input"><input placeholder="Twój E-mail" type="text" name="email" data-required="text" data-required-email="email"></span>
+                </p>
+                <p class="contactform-field contactform-textarea">
+                    <label class="contactform-label">Wiadomość</label><!-- NO SPACE --><span class="contactform-input"><textarea placeholder="Twoja wiadomość" name="mess" data-required="text"></textarea></span>
+                </p>
+                <p class="contactform-submit">
+                    <input value="Wyślij" type="submit">
+                </p>
+            </form>
+        </div>
+        <br>
+        <br>
+        <!-- Google Maps -->
+        <div class="contacts-map allstore-gmap">
+            <div class="marker" data-zoom="15" data-lat="49.5572381" data-lng="22.2195119" data-marker="<%= image_url("marker.png") %>">38-500 Sanok, ul. Korczaka 12</div>
+        </div>
+        <!-- Contacts - end -->
+
+    </section>
+</main>

@@ -1,0 +1,24 @@
+<main>
+    <section class="container">
+
+
+        <ul class="b-crumbs">
+            <li>
+                <%= link_to "Home", root_path %>
+            </li>
+            <li>
+                <span><%= @roletowa.title %></span>
+            </li>
+        </ul>
+        <h1 class="main-ttl"><span><%= @roletowa.title %></span></h1>
+        <!-- Blog Post - start -->
+        <div class="post-wrap stylization">
+            
+            <%= image_tag @roletowa.avatar.url(:large) %>
+            
+            <%= @roletowa.content.html_safe %>
+
+        </div>
+        <!-- Blog Post - end -->
+    </section>
+</main>

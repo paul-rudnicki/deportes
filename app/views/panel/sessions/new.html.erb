@@ -1,18 +1,50 @@
-<%=form_tag panel_sessions_path do %>
-  <div class="form-group has-feedback">
-    <%= text_field_tag :email, nil, placeholder: 'Email', class: 'form-control' %>
-    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-  </div>
-  <div class="form-group has-feedback">
-  	<%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Hasło' %>
-    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-  </div>
-  <div class="row">
-    <div class="col-xs-12">
-    <%= submit_tag 'Zaloguj', class: 'btn btn-primary btn-block btn-flat' %>
-    </div>
-  </div>
-<% end %>
+<main>
+    <section class="container stylization maincont">
 
-<a href="#">I forgot my password</a><br>
-<a href="register.html" class="text-center">Register a new membership</a>
+        <ul class="b-crumbs">
+            <li>
+                <%= link_to "Home", root_path %>
+            </li>
+            <li>
+                <span>Logowanie / Rejestracja</span>
+            </li>
+        </ul>
+        
+        <%= render 'panel/shared/info' %>
+
+        <h1 class="main-ttl"><span>Logowanie / Rejestracja</span></h1>
+        <div class="auth-wrap">
+            <div class="auth-col">
+                <h2>Logowanie</h2>
+                <%=form_tag panel_sessions_path, class: 'login' do %>
+                    <p>
+                        <label for="username">E-mail <span class="required">*</span></label><%= text_field_tag :email %>
+                    </p>
+                    <p>
+                        <label for="password">Hasło <span class="required">*</span></label><%= password_field_tag :password %>
+                    </p>
+                    <p class="auth-submit">
+                        <%= submit_tag 'Zaloguj' %>
+                    </p>
+                    <p class="auth-lost_password">
+                        <a href="#">Zapomniałeś hasła?</a>
+                    </p>
+                <% end %>
+            </div>
+            <div class="auth-col">
+                <h2>Rejestracja</h2>
+                <form method="post" class="register">
+                    <p>
+                        <label for="reg_email">Email <span class="required">*</span></label><input type="email" id="reg_email">
+                    </p>
+                    <p>
+                        <label for="reg_password">Password <span class="required">*</span></label><input type="password" id="reg_password">
+                    </p>
+                    <p class="auth-submit">
+                        <input type="submit" value="Register">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,25 @@
+.shop-menu ul li.topauth a:first-child {
+	background: image-url("sep1.png") no-repeat right center;
+}
+.callout-danger{
+	p, strong{
+		color: #fff;
+	}
+	p{
+		background: red;
+		padding: 10px;
+	}
+}
+.callout-info{
+	p, strong{
+		color: #fff;
+	}
+	p{
+		background: #eff1fb;
+		padding: 10px;
+	}
+}
+.post-wrap img{
+	float: left;
+	margin-right: 15px;
+}

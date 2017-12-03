@@ -4,12 +4,12 @@ class Panel::SessionsController < Panel::ApplicationController
 	layout 'login', only: [:new, :create]
 
 	def new
-
+    redirect_to panel_users_path if session[:current_user_id]
   end
 
   def create
   	@user = User.find_by(email: params[:email]).try(:authenticate, params[:password])
-  	if @user
+    if @user
   		session[:current_user_id] = @user.id
   		redirect_to panel_users_path, notice: 'Witaj na swoim koncie'
 		else
