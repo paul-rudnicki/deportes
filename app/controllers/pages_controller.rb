@@ -6,8 +6,10 @@ class PagesController < ApplicationController
   end
 
   def contact
-    ContactMailer.contact(params[:name], params[:email], params[:message]).deliver
-    flash[:notice] = 'Email został wysłany'
+    if params[:name]present? && params[:email] && params[:message]
+      ContactMailer.contact(params[:name], params[:email], params[:message]).deliver
+      flash[:notice] = 'Email został wysłany'
+    end
   end
 
   def przeciwpozarowe

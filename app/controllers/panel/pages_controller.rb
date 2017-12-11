@@ -2,9 +2,9 @@ class Panel::PagesController < Panel::ApplicationController
 
   def index
     if params[:search].present?
-      @pages = Page.matching_title(params[:search]).page(params[:page]).per(5)
+      @pages = Page.matching_title(params[:search]).page(params[:page]).per(10)
     else
-      @pages = Page.all.page(params[:page]).per(5)
+      @pages = Page.all.page(params[:page]).per(10)
     end
   end
 
