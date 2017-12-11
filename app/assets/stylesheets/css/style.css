@@ -327,7 +327,7 @@ body {
 }
 .shop-menu ul li a .shop-menu-ttl {
 	display: inline-block;
-	border-bottom: 1px solid transp.toparent;
+	border-bottom: 1px solid transparent;
 	transition: all 0.2s;
 	line-height: 1;
 }
