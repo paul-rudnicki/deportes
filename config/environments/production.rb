@@ -98,5 +98,5 @@ Rails.application.configure do
     :authentication => 'plain',
     :enable_starttls_auto => true
   }
-  config.action_mailer.default_url_options = {:host => 'damp-ridge-95162.herokuapp.com/'}
+  
 end
