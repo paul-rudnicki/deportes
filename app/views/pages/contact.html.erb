@@ -39,9 +39,12 @@
 
         <!-- Contact Form -->
         <div class="contactform-wrap">
-            <%= form_tag 'contact', class: 'form-validate' %>
-                <h3 class="component-ttl component-ttl-ct component-ttl-hasdesc"><span>Nasz do nas</span></h3>
+            <%= form_tag kontakt_path, method: :get, class: 'form-validate' do %>
+                <h3 class="component-ttl component-ttl-ct component-ttl-hasdesc"><span>Napisz do nas</span></h3>
                 <p class="component-desc component-desc-ct">Odpowiemy w najszybszym możliwy czasie</p>
+                <% if flash[:notice].present? %>
+                    <p class="component-desc component-desc-ct"><%= flash[:notice] %></p>
+                <% end %>
                 <p class="contactform-field contactform-text">
                     <label class="contactform-label">Imię</label><!-- NO SPACE --><span class="contactform-input"><input placeholder="Imię" type="text" name="name" data-required="text"></span>
                 </p>
@@ -49,12 +52,12 @@
                     <label class="contactform-label">E-mail</label><!-- NO SPACE --><span class="contactform-input"><input placeholder="Twój E-mail" type="text" name="email" data-required="text" data-required-email="email"></span>
                 </p>
                 <p class="contactform-field contactform-textarea">
-                    <label class="contactform-label">Wiadomość</label><!-- NO SPACE --><span class="contactform-input"><textarea placeholder="Twoja wiadomość" name="mess" data-required="text"></textarea></span>
+                    <label class="contactform-label">Wiadomość</label><!-- NO SPACE --><span class="contactform-input"><textarea placeholder="Twoja wiadomość" name="message" data-required="text"></textarea></span>
                 </p>
                 <p class="contactform-submit">
-                    <input value="Wyślij" type="submit">
+                    <%= submit_tag 'Wyślij' %>
                 </p>
-            </form>
+            <% end %>
         </div>
         <br>
         <br>

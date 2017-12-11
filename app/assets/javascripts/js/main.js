@@ -403,18 +403,20 @@ $(document).ready(function () {
             }
         });
         if (errors === 0) {
-            var form1 = $(this);
-            $.ajax({
-                type: "POST",
-                url: 'php/email.php',
-                data: $(this).serialize(),
-                success: function(data) {
-                    form1.append('<p class="form-result">Thank you!</p>');
-                    $("form").trigger('reset');
-                }
-            });
+            return true;
+            // var form1 = $(this);
+            // $.ajax({
+            //     type: "POST",
+            //     url: 'php/email.php',
+            //     data: $(this).serialize(),
+            //     success: function(data) {
+            //         form1.append('<p class="form-result">Thank you!</p>');
+            //         $("form").trigger('reset');
+            //     }
+            // });
+        } else {
+            return false;
         }
-        return false;
     });
     $('.form-validate').find('[data-required="text"]').blur(function () {
         if ($(this).attr('data-required-email') == 'email' && ($(this).hasClass("redborder"))) {
